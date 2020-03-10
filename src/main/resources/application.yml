@@ -1,0 +1,20 @@
+---
+micronaut:
+  application:
+    name: vaas
+
+---
+micronaut:
+  metrics:
+    enabled: true
+    export:
+      prometheus:
+        enabled: true
+        step: PT1M
+        descriptions: true
+  router:
+    static-resources:
+      default:
+        enabled: true
+        mapping: "/static/content/spa/**"
+        paths: "classpath:public"
